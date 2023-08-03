@@ -27,7 +27,7 @@ size_t Smallest2PowGreaterThan(T n) {
     return N;
 }
 
-vector<complex<double>> PlainFft(const vector<complex<double>> &a, bool inverse = false) {
+vector<complex<double>> PlainDft(const vector<complex<double>> &a, bool inverse = false) {
     size_t n = a.size();
     vector<complex<double>> b(n, complex<double>(0, 0));
     double circle = (inverse ? -2 * M_PI: 2 * M_PI);

@@ -81,10 +81,10 @@ int main(int argc, char *argv[]) {
     string input_filename = "samples/sample_";
     
     EvalMathing(input_filename, output_filename+"recursive/not_fast/", 26, 1000000, N, RecursiveFft, GetMatchingLocations);
-    // EvalMathing(input_filename, output_filename+"recursive/fast/", 26, 10, N, RecursiveFft, GetMatchingLocationsFast);
-    // EvalMathing(input_filename, output_filename+"cooley_tukey/not_fast/", 26, 10, N, CooleyTukeyFft, GetMatchingLocations);
-    // EvalMathing(input_filename, output_filename+"cooley_tukey/fast/", 26, 10, N, CooleyTukeyFft, GetMatchingLocationsFast);
-    // EvalMathing(input_filename, output_filename+"plain/not_fast/", 26, 10, N, PlainFft, GetMatchingLocations);
-    // EvalMathing(input_filename, output_filename+"plain/fast/", 26, 10, N, PlainFft, GetMatchingLocationsFast);
+    EvalMathing(input_filename, output_filename+"recursive/fast/", 26, 10, N, RecursiveFft, GetMatchingLocationsFast);
+    EvalMathing(input_filename, output_filename+"cooley_tukey/not_fast/", 26, 10, N, CooleyTukeyFft, GetMatchingLocations);
+    EvalMathing(input_filename, output_filename+"cooley_tukey/fast/", 26, 10, N, CooleyTukeyFft, GetMatchingLocationsFast);
+    EvalMathing(input_filename, output_filename+"plain/not_fast/", 26, 10, N, PlainDft, GetMatchingLocations);
+    EvalMathing(input_filename, output_filename+"plain/fast/", 26, 10, N, PlainDft, GetMatchingLocationsFast);
     return 0;
 }
